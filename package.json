@@ -1,5 +1,5 @@
 {
-  "name": "angular2-quickstart",
+  "name": "gulp-starter",
   "version": "1.0.0",
   "scripts": {
     "start": "concurrent \"npm run tsc:w\" \"npm run lite\" ",
@@ -29,8 +29,23 @@
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
     "gulp-ruby-sass": "^2.0.6",
+    "gulp-sass": "^2.3.2",
     "gulp-uglify": "^1.5.4",
     "lite-server": "^2.1.0",
     "typescript": "^1.7.5"
-  }
+  },
+  "description": "Using Gulp for 1st Time",
+  "main": "config.prod.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/walthamstowbob/angular2-seed.git"
+  },
+  "keywords": [
+    "gulp"
+  ],
+  "author": "Barry O'Brien",
+  "bugs": {
+    "url": "https://github.com/walthamstowbob/angular2-seed/issues"
+  },
+  "homepage": "https://github.com/walthamstowbob/angular2-seed#readme"
 }

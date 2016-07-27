@@ -1,0 +1,25 @@
+{
+  "name": "Lekker IT",
+  "description": "1st Angular2 based website",
+  "main": "",
+  "authors": [
+    "Barry O'Brien"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "Angular2",
+    "Angular"
+  ],
+  "homepage": "https://github.com/walthamstowbob/angular2-seed",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angular2#^1.5.8",
+    "backbone": "^1.3.3"
+  }
+}
