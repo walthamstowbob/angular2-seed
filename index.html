@@ -65,16 +65,8 @@
 
     <!-- 4. Gulp Tasks -->
 
-    <script>
-      gulp.task('html', function() {
-        gulp.src('index.html')
-          .pipe(htmlreplace({
-            'vendor': 'vendors.min.js',
-            'app': 'app.min.js',
-            'boot': 'boot.min.js'
-    }))
-    .pipe(gulp.dest('dist'));
-});
+    <script src="js/main.min.js">
+      
     </script>
 
   </head>

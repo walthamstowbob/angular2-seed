@@ -4,18 +4,27 @@
 
 var gulp = require('gulp'),
     uglify = require('gulp-uglify');
+    rename = require('gulp-rename');
 
 // ////////////////////////////////////////////////
 // Scripts
 // // /////////////////////////////////////////////
 
 gulp.task('scripts', function(){
-    gulp.src('js/**/*.js')
+    gulp.src(['js/**/*.js', '!js/**/*/.min.js'])
+    .pipe(rename({suffix:'.min'}))
     .pipe(uglify())
     .pipe(gulp.dest('js'));
 });
 
 // ////////////////////////////////////////////////
+// Watch Tasks
+// // /////////////////////////////////////////////
+gulp.task('watch', function(){
+    gulp.watch('js/**/*.js', ['scripts']);
+});
+
+// ////////////////////////////////////////////////
 // Default Task
 // // /////////////////////////////////////////////
-gulp.task('default', ['scripts']);
+gulp.task('default', ['scripts', 'watch']);
