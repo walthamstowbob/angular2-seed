@@ -2,21 +2,22 @@
 
   <head>
     <base href="/">
-    <title>Angular 2 QuickStart</title>
+    <title>Lekker IT -- Yummy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">    
-
+    <meta http-equiv="x-ua-compatible" content="ie=edge"> 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="app/styles.css">
-
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <body>
+    
+    </body>
     <style>
-      body { padding: 30px; }
-
-      h2 { color: deeppink;}
 
     </style>
 
     <!-- 1. Load libraries -->
     <!-- IE required polyfills, in this exact order -->
+    <script src="https://use.fontawesome.com/6cf935c43f.js"></script>
     <script src="node_modules/es6-shim/es6-shim.min.js"></script>
     <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
@@ -26,8 +27,27 @@
     <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
     <script src="node_modules/angular2/bundles/router.dev.js"></script>
     <script src="node_modules/angular2/bundles/http.dev.js"></script>
-    <script src="node_modules/underscore/underscore.js"></script>    
+    <script src="node_modules/underscore/underscore.js"></script>
+    <script>
+        
+        $(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+        </script>
     
+    <!-- build:app -->
+    <script src="config.js"></script>
 
     <!-- 2. Configure SystemJS -->
     <script>
@@ -41,6 +61,20 @@
       });
       System.import('app/boot')
             .then(null, console.error.bind(console));
+    </script>
+
+    <!-- 4. Gulp Tasks -->
+
+    <script>
+      gulp.task('html', function() {
+        gulp.src('index.html')
+          .pipe(htmlreplace({
+            'vendor': 'vendors.min.js',
+            'app': 'app.min.js',
+            'boot': 'boot.min.js'
+    }))
+    .pipe(gulp.dest('dist'));
+});
     </script>
 
   </head>

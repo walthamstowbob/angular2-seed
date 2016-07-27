@@ -1,5 +1,6 @@
-/// <reference path="../typings/index.d.ts" />
-System.register(['angular2/core', './components/change.password-form.component', './components/signup-form.component', './components/subscription-form.component', './components/contact-form.component', './components/zippy.component', './components/tweet.component', './pipes/summary.pipe', './services/tweet.service', './components/vote.component', './components/like.component', './components/favorite.component', './components/courses.component', './components/authors.component', './components/artists.component'], function(exports_1, context_1) {
+// Main Component
+
+System.register(['angular2/core', './components/lekker-navbar.component', './components/lekker-jumbotron.component', './components/lekker-about-me.component', './components/zippy.component', './components/zippy-portfolio.component', './components/zippy-weather.component', './components/zippy-smiton.component', './components/zippy-bootstrap.component', './components/contact-form.component', './components/lekker-footer.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -11,106 +12,62 @@ System.register(['angular2/core', './components/change.password-form.component',
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, change_password_form_component_1, signup_form_component_1, subscription_form_component_1, contact_form_component_1, zippy_component_1, tweet_component_1, summary_pipe_1, tweet_service_1, vote_component_1, like_component_1, favorite_component_1, courses_component_1, authors_component_1, artists_component_1;
+    var core_1, lekker_navbar_component_1, lekker_jumbotron_component_1, lekker_about_me_component_1, zippy_component_1, zippy_portfolio_component_1, zippy_weather_component_1, zippy_smiton_component_1, zippy_bootstrap_component_1, contact_form_component_1, lekker_footer_component_1;
     var AppComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             },
-            function (change_password_form_component_1_1) {
-                change_password_form_component_1 = change_password_form_component_1_1;
+            function (lekker_navbar_component_1_1) {
+                lekker_navbar_component_1 = lekker_navbar_component_1_1;
             },
-            function (signup_form_component_1_1) {
-                signup_form_component_1 = signup_form_component_1_1;
+            function (lekker_jumbotron_component_1_1) {
+                lekker_jumbotron_component_1 = lekker_jumbotron_component_1_1;
             },
-            function (subscription_form_component_1_1) {
-                subscription_form_component_1 = subscription_form_component_1_1;
-            },
-            function (contact_form_component_1_1) {
-                contact_form_component_1 = contact_form_component_1_1;
+            function (lekker_about_me_component_1_1) {
+                lekker_about_me_component_1 = lekker_about_me_component_1_1;
             },
             function (zippy_component_1_1) {
                 zippy_component_1 = zippy_component_1_1;
             },
-            function (tweet_component_1_1) {
-                tweet_component_1 = tweet_component_1_1;
+            function (zippy_portfolio_component_1_1) {
+                zippy_portfolio_component_1 = zippy_portfolio_component_1_1;
             },
-            function (summary_pipe_1_1) {
-                summary_pipe_1 = summary_pipe_1_1;
+            function (zippy_weather_component_1_1) {
+                zippy_weather_component_1 = zippy_weather_component_1_1;
             },
-            function (tweet_service_1_1) {
-                tweet_service_1 = tweet_service_1_1;
+            function (zippy_smiton_component_1_1) {
+                zippy_smiton_component_1 = zippy_smiton_component_1_1;
             },
-            function (vote_component_1_1) {
-                vote_component_1 = vote_component_1_1;
+            function (zippy_bootstrap_component_1_1) {
+                zippy_bootstrap_component_1 = zippy_bootstrap_component_1_1;
             },
-            function (like_component_1_1) {
-                like_component_1 = like_component_1_1;
+            function (contact_form_component_1_1) {
+                contact_form_component_1 = contact_form_component_1_1;
             },
-            function (favorite_component_1_1) {
-                favorite_component_1 = favorite_component_1_1;
-            },
-            function (courses_component_1_1) {
-                courses_component_1 = courses_component_1_1;
-            },
-            function (authors_component_1_1) {
-                authors_component_1 = authors_component_1_1;
-            },
-            function (artists_component_1_1) {
-                artists_component_1 = artists_component_1_1;
+            function (lekker_footer_component_1_1) {
+                lekker_footer_component_1 = lekker_footer_component_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
-                function AppComponent(tweetService) {
-                    this.viewMode = 'map';
-                    this.courses = ['Course1', 'Course2', 'Course3'];
-                    this.course = {
-                        title: "Angular 2 for Beginners",
-                        rating: 4.9745,
-                        students: 5981,
-                        price: 99.95,
-                        releaseDate: new Date(2016, 3, 1)
-                    };
-                    this.tweet = {
-                        totalVotes: 11,
-                        iVote: false,
-                        totalLikes: 10,
-                        iLike: false
-                    };
-                    this.post = {
-                        title: "Angular 2 Tutorial for Beginners",
-                        body: "Lorem ipsum dolor sit amet, eam mediocrem molestiae honestatis cu, prima primis graeco ex eum. Pro propriae atomorum constituto ea, decore cetero definitiones cu ius. Ei verear deleniti laboramus quo, facete numquam nominati ea quo, id vix viris equidem percipit. Ei ullum aeque alienum vis, possit abhorreant vix ut.",
-                        voteCount: 10,
-                        iVote: 0,
-                        title: "Title",
-                        isFavorite: true
-                    };
-                    this.isUp = false;
-                    this.isFavorite = false;
-                    this.title = "Angular App";
-                    this.tweets = tweetService.getTweets();
+                function AppComponent() {
+                    this.viewMode = ['home', 'about', 'portfolio', 'contact', 'desk'];
+                    this.isUp = true;
                 }
-                AppComponent.prototype.onFavoriteChange = function ($event) {
-                    console.log($event);
-                };
                 AppComponent.prototype.onUpChange = function ($event) {
                     console.log($event);
                 };
                 AppComponent.prototype.onClick = function () {
                     this.isUp = !this.isUp;
-                    this.isFavorite = !this.isFavorite;
                 };
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: "\n        \n        <div class=\"map\">\n        <input id=\"search\" type=\"text\" class=\"form-control\" placeholder=\"Search\">\n        </div>\n\n        <change-password></change-password>\n        <signup-form></signup-form>\n        <subscription-form></subscription-form>\n        <contact-form></contact-form>\n\n        <zippy heading=\"who can see my stuff?\">\n            Content of who can see my stuff\n        </zippy>\n\n        <zippy heading=\"Who can contact me?\">\n        Content of who can contact me\n        </zippy>\n        \n        <ul class=\"nav nav-pills\">\n            <li [class.active]=\"viewMode == 'map'\">\n            <a (click)=\"viewMode = 'map'\">Map View</a>\n            </li>\n            <li [class.active]=\"viewMode == 'list'\"><a (click)=\"viewMode = 'list'\">List View</a></li>\n        </ul>\n\n        <div [ngSwitch]=\"viewMode\">\n            <template [ngSwitchWhen]=\"'map'\" ngSwitchDefault>\n            <div class =\"map\"><iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.2854559160382!2d5.170772106274482!3d52.28611274115522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x30368c8b0122d0f8!2sSimsation+Nederland!5e0!3m2!1sen!2sus!4v1467201296315\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe></div>\n            </template>\n            <template [ngSwitchWhen]=\"'list'\">List View Content</template>\n        </div>\n\n        \n\n        <ul>\n            <li *ngFor=\"#course of courses, #i = index\">\n                {{ i + 1 }} - {{ course }}\n            </li>\n        </ul>\n\n        <div class=\"map\">\n        {{ course.title | uppercase }}<br/>\n        {{ course.students | number }}<br/>\n        {{ course.rating | number:'2.2-2' }}<br/>\n        {{ course.price | currency:'EUR':true:'2.2-2' }}<br/>\n        {{ course.releaseDate | date:'MMM yyyy' }}<br/>\n        {{ course | json }}\n        </div>\n\n        <div class=\"map\">\n        {{ post.title }}<br/>\n        {{ post.body | summary:10}}\n        </div>\n        \n        <div *ngFor=\"#tweet of tweets\">\n            <tweet [data]=\"tweet\"></tweet>\n        </div>\n\n        <div [hidden]=\"courses.length == 0\">List of Courses</div>\n\n        <div [hidden]=\"courses.lenght > 0\">No courses active</div>\n        \n        <div *ngIf=\"courses.length == 0\">List of Courses</div>\n\n        <div *ngIf=\"courses.lenght > 0\">No courses active</div>\n\n        <vote\n            [voteCount]=\"post.voteCount\"\n            [iVote]=\"post.iVote\"\n            (vote)=\"onVote($event)\">\n        </vote>\n\n        <like [totalLikes]=\"tweet.totalLikes\" [iLike]=\"tweet.iLike\"></like>\n\n        <i class=\"glyphicon glyphicon-heart\"></i>\n\n        <i class=\"glyphicon glyphicon-star\"></i>\n\n        <favorite [isFavorite]=\"post.isFavorite\"\n        (change)=\"onFavoriteChange($event)\"></favorite>\n\n        <input type=\"text\" [(ngModel)]=\"title\" />\n        <input type=\"button\" (click)=\"title = ''\" value=\"Clear\" />\n        Preview: {{ title }}\n\n        <courses></courses>\n        <authors></authors>\n        <artists></artists>\n            ",
-                        styles: ["\n    \n            .nav-pills {\n                margin-bottom: 20px;\n        }\n            .map {\n                margin-bottom: 20px;\n        }\n\n            .panel {\n                margin-bottom: 20px;\n            }\n        \n    "],
-                        directives: [change_password_form_component_1.ChangePasswordFormComponent, signup_form_component_1.SignUpFormComponent, subscription_form_component_1.SubscriptionFormComponent, contact_form_component_1.ContactFormComponent, zippy_component_1.ZippyComponent, tweet_component_1.TweetComponent, vote_component_1.VoteComponent, like_component_1.LikeComponent, favorite_component_1.FavoriteComponent, courses_component_1.CoursesComponent, authors_component_1.AuthorsComponent, artists_component_1.ArtistsComponent],
-                        providers: [tweet_service_1.TweetService],
-                        pipes: [summary_pipe_1.SummaryPipe]
+                        template: "\n    <div class=\"navbar-static-top navbar-default\" role=\"navigation\">\n        <div class=\"container-fluid\">\n            <div class=\"navbar-brand\">\n            <button class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navHeaderCollapse\">Menu</button>\n            <a class=\"navbar-brand\" href=\"#\"><img src=\"./logo.jpg\"></a> \n\n    <ul class=\"nav nav-pills navbar-left\">\n        <li [class.active]=\"viewMode == 'home'\"><a href=\"#\" (click)=\"viewMode = 'home'\">Home</a></li>\n        <li [class.active]=\"viewMode == 'about'\"><a href=\"#\" (click)=\"viewMode = 'about'\">About</a></li>\n        <li [class.active]=\"viewMode == 'portfolio'\"><a href=\"#\" (click)=\"viewMode = 'portfolio'\">Portfolio</a>\n            </li>\n        <li [class.active]=\"viewMode == 'contact'\"><a href=\"#\" (click)=\"viewMode = 'contact'\">Contact</a></li>\n        <li [class.active]=\"viewMode == 'desk'\"><a href=\"http://www.lekkerit.com/desk\" target= \"_blank\" (click)=\"viewMode = 'desk'\">Desk</a></li>\n    </ul>\n\n    <div class=\"zippy-page\" [ngSwitch]=\"viewMode\">\n        <template [ngSwitchWhen]=\"'home'\" ngSwitchDefault><lekker-jumbotron></lekker-jumbotron></template>\n        <template [ngSwitchWhen]=\"'about'\"><lekker-about-me></lekker-about-me></template>\n        <template [ngSwitchWhen]=\"'portfolio'\">\n            <zippy-smiton heading=\"Freelance Developer\"></zippy-smiton>\n            <zippy heading=\"Scrum Master\"></zippy>                \n            <zippy-bootstrap heading=\"Bootstrap\"></zippy-bootstrap>\n            <zippy-weather heading=\"Applications\"></zippy-weather>\n        </template>\n        <template [ngSwitchWhen]=\"'contact'\"><contact-form></contact-form></template>\n    </div>\n    </div>\n    </div>\n    </div>\n\n    <lekker-footer></lekker-footer>\n\n    <div class=\"container\" class=\"container-img\">\n          \n    </div>\n\n                ",
+                        directives: [lekker_navbar_component_1.LekkerNavbarComponent, lekker_jumbotron_component_1.LekkerJumbotronComponent, lekker_about_me_component_1.LekkerAboutMeComponent, zippy_portfolio_component_1.ZippyPortfolioComponent, contact_form_component_1.ContactFormComponent, zippy_component_1.ZippyComponent, zippy_weather_component_1.ZippyWeatherComponent, zippy_smiton_component_1.ZippySmitonComponent, zippy_bootstrap_component_1.ZippyBootstrapComponent, lekker_footer_component_1.LekkerFooterComponent],
                     }), 
-                    __metadata('design:paramtypes', [tweet_service_1.TweetService])
+                    __metadata('design:paramtypes', [])
                 ], AppComponent);
                 return AppComponent;
             }());
@@ -118,4 +75,4 @@ System.register(['angular2/core', './components/change.password-form.component',
         }
     }
 });
-//# sourceMappingURL=app.component.js.map
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYXBwLmNvbXBvbmVudC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbImFwcC5jb21wb25lbnQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7WUEwREE7Z0JBQUE7b0JBRUksYUFBUSxHQUFHLENBQUMsTUFBTSxFQUFFLE9BQU8sRUFBRSxXQUFXLEVBQUUsU0FBUyxFQUFFLE1BQU0sQ0FBQyxDQUFDO29CQU03RCxTQUFJLEdBQUcsSUFBSSxDQUFDO2dCQU1oQixDQUFDLEFBRkk7Z0JBUkQsaUNBQVUsR0FBVixVQUFXLE1BQU07b0JBQ2IsT0FBTyxDQUFDLEdBQUcsQ0FBQyxNQUFNLENBQUMsQ0FBQztnQkFDeEIsQ0FBQztnQkFJRCw4QkFBTyxHQUFQO29CQUNJLElBQUksQ0FBQyxJQUFJLEdBQUcsQ0FBQyxJQUFJLENBQUMsSUFBSSxDQUFDO2dCQUMzQixDQUFDO2dCQXhETDtvQkFBQyxnQkFBUyxDQUFDO3dCQUNQLFFBQVEsRUFBRSxRQUFRO3dCQUNsQixRQUFRLEVBQUUseTVEQXFDRzt3QkFDYixVQUFVLEVBQUUsQ0FBQywrQ0FBcUIsRUFBRSxxREFBd0IsRUFBRSxrREFBc0IsRUFBRSxtREFBdUIsRUFBRSw2Q0FBb0IsRUFBRSxnQ0FBYyxFQUFFLCtDQUFxQixFQUFFLDZDQUFvQixFQUFFLG1EQUF1QixFQUFFLCtDQUFxQixDQUFDO3FCQUVwUCxDQUFDOztnQ0FBQTtnQkFnQkYsbUJBQUM7WUFBRCxDQUFDLEFBZEQsSUFZSztZQVpMLHVDQVlLLENBQUEiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge0NvbXBvbmVudH0gZnJvbSAnYW5ndWxhcjIvY29yZSc7XG5pbXBvcnQge09ic2VydmFibGV9IGZyb20gJ3J4anMvUngnO1xuXG5pbXBvcnQge0xla2tlck5hdmJhckNvbXBvbmVudH0gZnJvbSAnLi9jb21wb25lbnRzL2xla2tlci1uYXZiYXIuY29tcG9uZW50JztcbmltcG9ydCB7TGVra2VySnVtYm90cm9uQ29tcG9uZW50fSBmcm9tICcuL2NvbXBvbmVudHMvbGVra2VyLWp1bWJvdHJvbi5jb21wb25lbnQnO1xuaW1wb3J0IHtMZWtrZXJBYm91dE1lQ29tcG9uZW50fSBmcm9tICcuL2NvbXBvbmVudHMvbGVra2VyLWFib3V0LW1lLmNvbXBvbmVudCc7XG5pbXBvcnQge1ppcHB5Q29tcG9uZW50fSBmcm9tICcuL2NvbXBvbmVudHMvemlwcHkuY29tcG9uZW50JztcbmltcG9ydCB7WmlwcHlQb3J0Zm9saW9Db21wb25lbnR9IGZyb20gJy4vY29tcG9uZW50cy96aXBweS1wb3J0Zm9saW8uY29tcG9uZW50JztcbmltcG9ydCB7WmlwcHlXZWF0aGVyQ29tcG9uZW50fSBmcm9tICcuL2NvbXBvbmVudHMvemlwcHktd2VhdGhlci5jb21wb25lbnQnO1xuaW1wb3J0IHtaaXBweVNtaXRvbkNvbXBvbmVudH0gZnJvbSAnLi9jb21wb25lbnRzL3ppcHB5LXNtaXRvbi5jb21wb25lbnQnO1xuaW1wb3J0IHtaaXBweUJvb3RzdHJhcENvbXBvbmVudH0gZnJvbSAnLi9jb21wb25lbnRzL3ppcHB5LWJvb3RzdHJhcC5jb21wb25lbnQnO1xuaW1wb3J0IHtDb250YWN0Rm9ybUNvbXBvbmVudH0gZnJvbSAnLi9jb21wb25lbnRzL2NvbnRhY3QtZm9ybS5jb21wb25lbnQnO1xuaW1wb3J0IHtMZWtrZXJGb290ZXJDb21wb25lbnR9IGZyb20gJy4vY29tcG9uZW50cy9sZWtrZXItZm9vdGVyLmNvbXBvbmVudCc7XG5cbkBDb21wb25lbnQoe1xuICAgIHNlbGVjdG9yOiAnbXktYXBwJyxcbiAgICB0ZW1wbGF0ZTogYFxuICAgIDxkaXYgY2xhc3M9XCJuYXZiYXItc3RhdGljLXRvcCBuYXZiYXItZGVmYXVsdFwiIHJvbGU9XCJuYXZpZ2F0aW9uXCI+XG4gICAgICAgIDxkaXYgY2xhc3M9XCJjb250YWluZXItZmx1aWRcIj5cbiAgICAgICAgICAgIDxkaXYgY2xhc3M9XCJuYXZiYXItYnJhbmRcIj5cbiAgICAgICAgICAgIDxidXR0b24gY2xhc3M9XCJuYXZiYXItdG9nZ2xlXCIgZGF0YS10b2dnbGU9XCJjb2xsYXBzZVwiIGRhdGEtdGFyZ2V0PVwiLm5hdkhlYWRlckNvbGxhcHNlXCI+TWVudTwvYnV0dG9uPlxuICAgICAgICAgICAgPGEgY2xhc3M9XCJuYXZiYXItYnJhbmRcIiBocmVmPVwiI1wiPjxpbWcgc3JjPVwiLi9sb2dvLmpwZ1wiPjwvYT4gXG5cbiAgICA8dWwgY2xhc3M9XCJuYXYgbmF2LXBpbGxzIG5hdmJhci1sZWZ0XCI+XG4gICAgICAgIDxsaSBbY2xhc3MuYWN0aXZlXT1cInZpZXdNb2RlID09ICdob21lJ1wiPjxhIGhyZWY9XCIjXCIgKGNsaWNrKT1cInZpZXdNb2RlID0gJ2hvbWUnXCI+SG9tZTwvYT48L2xpPlxuICAgICAgICA8bGkgW2NsYXNzLmFjdGl2ZV09XCJ2aWV3TW9kZSA9PSAnYWJvdXQnXCI+PGEgaHJlZj1cIiNcIiAoY2xpY2spPVwidmlld01vZGUgPSAnYWJvdXQnXCI+QWJvdXQ8L2E+PC9saT5cbiAgICAgICAgPGxpIFtjbGFzcy5hY3RpdmVdPVwidmlld01vZGUgPT0gJ3BvcnRmb2xpbydcIj48YSBocmVmPVwiI1wiIChjbGljayk9XCJ2aWV3TW9kZSA9ICdwb3J0Zm9saW8nXCI+UG9ydGZvbGlvPC9hPlxuICAgICAgICAgICAgPC9saT5cbiAgICAgICAgPGxpIFtjbGFzcy5hY3RpdmVdPVwidmlld01vZGUgPT0gJ2NvbnRhY3QnXCI+PGEgaHJlZj1cIiNcIiAoY2xpY2spPVwidmlld01vZGUgPSAnY29udGFjdCdcIj5Db250YWN0PC9hPjwvbGk+XG4gICAgICAgIDxsaSBbY2xhc3MuYWN0aXZlXT1cInZpZXdNb2RlID09ICdkZXNrJ1wiPjxhIGhyZWY9XCJodHRwOi8vd3d3Lmxla2tlcml0LmNvbS9kZXNrXCIgdGFyZ2V0PSBcIl9ibGFua1wiIChjbGljayk9XCJ2aWV3TW9kZSA9ICdkZXNrJ1wiPkRlc2s8L2E+PC9saT5cbiAgICA8L3VsPlxuXG4gICAgPGRpdiBjbGFzcz1cInppcHB5LXBhZ2VcIiBbbmdTd2l0Y2hdPVwidmlld01vZGVcIj5cbiAgICAgICAgPHRlbXBsYXRlIFtuZ1N3aXRjaFdoZW5dPVwiJ2hvbWUnXCIgbmdTd2l0Y2hEZWZhdWx0PjxsZWtrZXItanVtYm90cm9uPjwvbGVra2VyLWp1bWJvdHJvbj48L3RlbXBsYXRlPlxuICAgICAgICA8dGVtcGxhdGUgW25nU3dpdGNoV2hlbl09XCInYWJvdXQnXCI+PGxla2tlci1hYm91dC1tZT48L2xla2tlci1hYm91dC1tZT48L3RlbXBsYXRlPlxuICAgICAgICA8dGVtcGxhdGUgW25nU3dpdGNoV2hlbl09XCIncG9ydGZvbGlvJ1wiPlxuICAgICAgICAgICAgPHppcHB5LXNtaXRvbiBoZWFkaW5nPVwiRnJlZWxhbmNlIERldmVsb3BlclwiPjwvemlwcHktc21pdG9uPlxuICAgICAgICAgICAgPHppcHB5IGhlYWRpbmc9XCJTY3J1bSBNYXN0ZXJcIj48L3ppcHB5PiAgICAgICAgICAgICAgICBcbiAgICAgICAgICAgIDx6aXBweS1ib290c3RyYXAgaGVhZGluZz1cIkJvb3RzdHJhcFwiPjwvemlwcHktYm9vdHN0cmFwPlxuICAgICAgICAgICAgPHppcHB5LXdlYXRoZXIgaGVhZGluZz1cIkFwcGxpY2F0aW9uc1wiPjwvemlwcHktd2VhdGhlcj5cbiAgICAgICAgPC90ZW1wbGF0ZT5cbiAgICAgICAgPHRlbXBsYXRlIFtuZ1N3aXRjaFdoZW5dPVwiJ2NvbnRhY3QnXCI+PGNvbnRhY3QtZm9ybT48L2NvbnRhY3QtZm9ybT48L3RlbXBsYXRlPlxuICAgIDwvZGl2PlxuICAgIDwvZGl2PlxuICAgIDwvZGl2PlxuICAgIDwvZGl2PlxuXG4gICAgPGxla2tlci1mb290ZXI+PC9sZWtrZXItZm9vdGVyPlxuXG4gICAgPGRpdiBjbGFzcz1cImNvbnRhaW5lclwiIGNsYXNzPVwiY29udGFpbmVyLWltZ1wiPlxuICAgICAgICAgIFxuICAgIDwvZGl2PlxuXG4gICAgICAgICAgICAgICAgYCxcbiAgICBkaXJlY3RpdmVzOiBbTGVra2VyTmF2YmFyQ29tcG9uZW50LCBMZWtrZXJKdW1ib3Ryb25Db21wb25lbnQsIExla2tlckFib3V0TWVDb21wb25lbnQsIFppcHB5UG9ydGZvbGlvQ29tcG9uZW50LCBDb250YWN0Rm9ybUNvbXBvbmVudCwgWmlwcHlDb21wb25lbnQsIFppcHB5V2VhdGhlckNvbXBvbmVudCwgWmlwcHlTbWl0b25Db21wb25lbnQsIFppcHB5Qm9vdHN0cmFwQ29tcG9uZW50LCBMZWtrZXJGb290ZXJDb21wb25lbnRdLFxuXG59KVxuXG5leHBvcnQgY2xhc3MgQXBwQ29tcG9uZW50IHtcblxuICAgIHZpZXdNb2RlID0gWydob21lJywgJ2Fib3V0JywgJ3BvcnRmb2xpbycsICdjb250YWN0JywgJ2Rlc2snXTtcblxuICAgIG9uVXBDaGFuZ2UoJGV2ZW50KXtcbiAgICAgICAgY29uc29sZS5sb2coJGV2ZW50KTtcbiAgICB9XG5cbiAgICBpc1VwID0gdHJ1ZTtcblxuICAgIG9uQ2xpY2soKXtcbiAgICAgICAgdGhpcy5pc1VwID0gIXRoaXMuaXNVcDtcbiAgICB9XG5cbiJdfQ==

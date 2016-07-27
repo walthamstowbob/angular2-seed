@@ -2,30 +2,9 @@ import {Component, Input} from 'angular2/core';
 
 @Component({
     selector: 'zippy',
-    
-    styles: [`
-        .zippy {
-            border: 1px solid #ccc;
-            border-radius: 2px;
-            margin-bottom: 20px;
-        }
-        
-        .zippy .zippy-heading {
-            padding: 20px;
-            font-weight: bold;
-        }
-        
-        .zippy .zippy-heading:hover{
-            background: #f0f0f0;
-            cursor: pointer;
-        }
-        
-        .zippy .zippy-content {
-            padding: 20px;
-        }
-            `],
     template: `
     
+    <div class="col-md-3">
     <div class="zippy">
         <div
             class="zippy-heading"
@@ -41,15 +20,26 @@ import {Component, Input} from 'angular2/core';
         </i>
         </div>
         <div *ngIf="isExpanded" class="zippy-content">
-            <ng-content></ng-content>
+
+        <div class="media">
+        <div class="media-middle">
+            <iframe 
+                class="media-object" width="600" height="325" src="https://www.youtube.com/embed/CRWaXYWFY_k" frameborder="0" allowfullscreen>
+            </iframe>
+            <a href="http://nrmm.london" target="_blank" class="btn btn-primary" id="nrmm">NRMM Database</a>
         </div>
-    </div>
+        </div>
+        <ng-content></ng-content>
+        </div>
+        </div>
+        </div>
+
         `,        
 })
 
 export class ZippyComponent  { 
    
-   isExpanded = false;
+   isExpanded = true;
 
    @Input() heading: string;
 

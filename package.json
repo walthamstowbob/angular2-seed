@@ -23,7 +23,13 @@
     "zone.js": "0.5.15"
   },
   "devDependencies": {
+    "bootstrap": "^3.3.6",
     "concurrently": "^2.0.0",
+    "del": "^2.2.1",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-ruby-sass": "^2.0.6",
+    "gulp-uglify": "^1.5.4",
     "lite-server": "^2.1.0",
     "typescript": "^1.7.5"
   }
