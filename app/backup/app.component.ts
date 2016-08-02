@@ -138,7 +138,7 @@ export class AppComponent {
     
     post = {
         title: "Angular 2 Tutorial for Beginners",
-        body: `Lorem ipsum dolor sit amet, eam mediocrem molestiae honestatis cu, prima primis graeco ex eum. Pro propriae atomorum constituto ea, decore cetero definitiones cu ius. Ei verear deleniti laboramus quo, facete numquam nominati ea quo, id vix viris equidem percipit. Ei ullum aeque alienum vis, possit abhorreant vix ut.`
+        body: `Lorem ipsum dolor sit amet, eam mediocrem molestiae honestatis cu, prima primis graeco ex eum. Pro propriae atomorum constituto ea, decore cetero definitiones cu ius. Ei verear deleniti laboramus quo, facete numquam nominati ea quo, id vix viris equidem percipit. Ei ullum aeque alienum vis, possit abhorreant vix ut.`,
         voteCount: 10,
         iVote: 0,
         title: "Title",

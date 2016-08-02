@@ -70,3 +70,4 @@ export class AppComponent {
         this.isUp = !this.isUp;
     }
 
+}
