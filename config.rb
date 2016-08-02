@@ -1,13 +1,11 @@
 require 'susy'
 require 'breakpoint'
 
-project_type = :stand_alone
-http_path = "/"
+http_path = "../"
 sass_dir = "scss"
 css_dir = "css"
-images_dir = 'images'
-fonts_dir = "fonts"
-javascript_dir = "js"
+images_dir = "images"
+javascript_dir = "javascript"
 line_comments = false
 preferred_syntax = :scss
 output_style = :compressed  

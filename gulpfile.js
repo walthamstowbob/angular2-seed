@@ -6,7 +6,11 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     compass = require('gulp-compass'),
     plumber = require('gulp-plumber'),
+    sass = require('gulp-sass'),
     rename = require('gulp-rename');
+
+var input = 'app/css/**/*.scss';
+var output = 'app/scss';
 
 // ////////////////////////////////////////////////
 // Scripts
@@ -23,6 +27,7 @@ gulp.task('scripts', function(){
 // ////////////////////////////////////////////////
 // Compass / Sass Tasks
 // // /////////////////////////////////////////////
+
 gulp.task('compass', function(){
     gulp.src('app/scss/style.scss') 
         .pipe(plumber())

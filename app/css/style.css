@@ -21,7 +21,7 @@ body {padding-top: 0px;}
 
 .container-fluid {
     margin: auto 0;
-    background-image:url("../photography.png");
+    background-image:url("./photography.png");
     background-attachment: fixed;
     min-height: 650px;
     min-width: 800px;
@@ -119,8 +119,7 @@ body {padding-top: 0px;}
     padding-top: 10px;
 }
 
-
-
-
-
-
+.right-sidebar {
+    float: right;
+    width: 200px;
+}
